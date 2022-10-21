@@ -50,7 +50,8 @@ This corresponds to the Beacon Deposit Contract. Balance: 14,373,623.00771856 Et
 ***3. What is special about these accounts:***
 
 **- 0x1db3439a222c519ab44bb1144fc28167b4fa6ee6:**  
-   Beacon Depositor. An address that has deposited ETH into the Beacon Chain to become a validator.  
+   Beacon Depositor. An address that has deposited ETH into the Beacon Chain to become a validator.
+   
 **- 0x000000000000000000000000000000000000dEaD:**  
    Null Address. This address is commonly used by projects to burn tokens (reducing total supply).
    Tokens are commonly considered burned after sending to an address whose private keys are impossible (or extremely improbable) for anyone to have access to.
@@ -58,6 +59,7 @@ This corresponds to the Beacon Deposit Contract. Balance: 14,373,623.00771856 Et
  
 ***4. Using remix add the contract "Bootcamp.sol" as a source file***
 
-**- Compile the contract:** Done using 0.8.17 compiler version. Available here in the repo.  
+**- Compile the contract:** Done using 0.8.17 compiler version. Available here in the repo.
+
 **- Deploy the contract to the Remix VM environment:** Done  
 
