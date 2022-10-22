@@ -59,7 +59,9 @@ This corresponds to the Beacon Deposit Contract. Balance: 14,373,623.00771856 Et
  
 ***4. Using remix add the contract "Bootcamp.sol" as a source file***
 
-**- Compile the contract:** Done using 0.8.17 compiler version. Available here in the repo.
+**- Compile the contract:** Done using 0.8.17 compiler version. Available in the folder "Homework_2".
 
-**- Deploy the contract to the Remix VM environment:** Done  
+**- Deploy the contract to the Remix VM environment:** Done. Artifacts uploaded in the folder "Homework_2".
+
+# Homework 3
 
