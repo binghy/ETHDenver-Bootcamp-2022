@@ -127,3 +127,6 @@ b) Using your choice of data structure, set up a variable called balances to kee
 ***19. We want to have a payments array for each user sending the payment. Create a mapping which returns an array of Payment structs when given this user's address.***
 
 Done. Available in the folder "Homework_4". Added a .txt file "Test_flow.txt" to check the flow of execution and retrieved data.
+
+# Homework 5
+
