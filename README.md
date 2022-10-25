@@ -75,6 +75,7 @@ This corresponds to the Beacon Deposit Contract. Balance: 14,373,623.00771856 Et
 ***- Address 0x000000000000000000000000000000000000dEaD if called by the deployer***  
 ***- The deployer's address otherwise***  
 
+
 Done. Available in the folder "Homework_3".  
 
 # Homework 4
@@ -126,4 +127,5 @@ b) Using your choice of data structure, set up a variable called balances to kee
 
 ***19. We want to have a payments array for each user sending the payment. Create a mapping which returns an array of Payment structs when given this user's address.***
 
-Done. Available in the folder "Homework_4". Added a .txt file "Test_flow.txt" to check the flow and data.
+
+Done. Available in the folder "Homework_4". Added a .txt file "Test_flow.txt" to check the flow of execution and retrieved data.
