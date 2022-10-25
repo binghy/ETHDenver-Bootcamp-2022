@@ -114,11 +114,11 @@ b) Using your choice of data structure, set up a variable called balances to kee
 
 ***15. Now change the constructor, to give all of the total supply to the owner of the contract.***
 
-***16. Now add a public function called transfer to allow a user to transfer their tokens to another address. This function should have 2 parameters:  
-       - the amount to transfer;  
-       - the recipient address.  
-       Why do we not need the sender's address here?  
-       What would be the implication of having the sender's address as a parameter?
+***16. Now add a public function called transfer to allow a user to transfer their tokens to another address. This function should have 2 parameters:***  
+       ***- the amount to transfer;***  
+       ***- the recipient address.*** 
+       ***Why do we not need the sender's address here?***  
+       ***What would be the implication of having the sender's address as a parameter?***
        
 ***17. Add an event to the transfer function to indicate that a transfer has taken place, it should log the amount and the recipient address.***
 
@@ -126,4 +126,4 @@ b) Using your choice of data structure, set up a variable called balances to kee
 
 ***19. We want to have a payments array for each user sending the payment. Create a mapping which returns an array of Payment structs when given this user's address.***
 
-Done. Available in
+Done. Available in the folder "Homework_4". Added a .txt file "Test_flow.txt" to check the flow and data.
