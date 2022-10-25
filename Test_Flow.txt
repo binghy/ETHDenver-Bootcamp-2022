@@ -1,0 +1,152 @@
+
+
+Flow of programming
+
+
+1. In Remix, create a new file called VolcanoCoin.sol
+
+
+2. Define the pragma compiler version to ^0.8.0
+
+
+3. Before the pragma version, add a license identifer
+   // SPDX-License-Identifier: UNLICENSED
+
+
+4. Create a contract called VolcanoCoin
+
+
+5. Create a variable to hold the total supply of 10000.
+
+
+6. Make a public function that returns the total supply.
+
+   Test: call the function "getSupply" to check that totalSupply = 10000
+
+
+7. Make a public function that can increase the total supply. Inside the function, add 1000 to the current total supply.
+
+   Test: - Call the function "getSupply" to check that totalSupply = 10000
+         - Call the function "setSupply" to add 1000 tokens to totalSupply
+         - Call again the function "getSupply" to check that now totalSupply = 11000
+
+8. We probably want users to be aware of functions in the contract for greater transparency,
+   but to make them all public will create some security risks (e.g. we don't want users to be able to change the total supply).
+   Declare an address variable called owner.
+
+
+9. Next, create a modifier which only allows an owner to execute certain functions.
+
+
+10. Make your change total supply function public, but add your modifier so that only the owner can execute it.
+
+    Test: - Call the function "getSupply" to check that totalSupply = 10000
+          - Call the function "setSupply" to add 1000 tokens to totalSupply
+          - Call again the function "getSupply" to check that now totalSupply = 11000
+          - Without changing address (contract creator), call again the function "setSupply" to add 1000 tokens to totalSupply
+          - Call again the function "getSupply" to check that now totalSupply = 12000
+          - Change address (choose among available in the list), call again the function "setSupply"
+	    to add 1000 tokens to totalSupply
+          - Call again the function "getSupply" to check that totalSupply is unchanged (still 12000)
+
+
+11. The contract owner's address should only be updateable in one place.
+    Create a constructor and within the constructor, store the owner's address.
+
+
+12. It would be useful to broadcast a change in the total supply. Create an event that emits
+    the new value whenever the total supply changes. When the supply changes, emit this event.
+
+    Test: - Call the function "getSupply" to check that totalSupply = 10000
+          - Call the function "setSupply" to add 1000 tokens to totalSupply
+          - Check, from the Terminal, that the transaction triggered calling the function "setSupply" has logged the event
+	    if totalSupply > previousTotalSupply, highlighting previous and current total supply
+
+
+13. In order to keep track of user balances, we need to associate a user's address with the balance that they have.
+
+    a) What is the best data structure to hold this association?
+       MAPPING DATA TYPE
+
+    b) Using your choice of data structure, set up a variable called balances to keep track of the number of
+       volcano coins that a user has.
+
+
+14. We want to allow the balances variable to be read from the contract, there are 2 ways to do this.
+
+    What are those ways?
+    a) DECLARING THE VARIABLE "BALANCES" AS PUBLIC
+    b) WRITING A GETTER FUNCTION WITH PUBLIC VISIBILITY AND READ STATE MUTABILITY
+
+    Use one of the ways to make your balances variable visible to users of the contract.
+    THE FIRST METHOD HAS BEEN IMPLEMENTED
+
+    Test: - Call the function "getSupply" to check that totalSupply = 10000
+	  - Without changing address (contract creator), question the parameter "balances" copying the contract creator address
+	    to check it owns amount = totalSupply
+	  - Change address (choose among available in the list), question the parameter "balances" copying the selected address
+	    to check it owns no tokens
+
+
+15. Now change the constructor, to give all of the total supply to the owner of the contract.
+    
+    CHANGED THE CONSTRUCTOR SO THAT THE TOTAL SUPPLY OF THE OWNER IS GOING TO BE INITIALIZED WITH STARTING TOTAL SUPPLY.
+    UPDATED THE FUNCTION "setSupply" TO UPDATE AMOUNT OF TOTAL SUPPLY OWNED BY THE OWNER.
+    
+    Test: - Call the function "getSupply" to check that totalSupply = 10000
+	  - Question the parameter "balances" to check the totalSupply owned by the owner (copy its address)
+	  - Call the function "setSupply" to add 1000 tokens to totalSupply
+	  - Call again the function "getSupply" to check that now totalSupply = 11000
+	  - Question again the parameter "balances" still on the owner address to check that totalSupply has been updated
+
+
+16. Now add a public function called transfer to allow a user to transfer their tokens to another address.
+    This function should have 2 parameters:
+    a) the amount to transfer
+    b) the recipient address
+
+    Why do we not need the sender's address here?
+    SINCE THE GLOBAL PARAMETER "msg.sender" IS USED, THAT IS THE ADDRESS SELECTED EACH TIME AMONG ALL AVAILABLE ADDRESSES FROM THE LIST
+
+    What would be the implication of having the sender's address as a parameter?
+    EXTRA LINES OF CODE TO CHECK TOKEN AMOUNT AVAILABLE FOR THE SENDER ADDRESS.
+    SINCE A MAPPING HAS BEEN USED, THE AMOUNT IS DIRECTLY QUESTIONABLE.
+
+    Test: - Call the function "getSupply" to check that totalSupply = 10000
+	  - Question the parameter "balances" to check the totalSupply owned by the owner (copy its address)
+	  - Change address (choose among available in the list) and question the parameter "balances"
+	    to check the totalSupply owned by the user (copy its address)
+	  - Call the function "transfer" to send "amount" tokens from the sender address (the one selected in the above list)
+	    to the receiver address
+	  - Question again the parameter "balances" on the user address to check the user has now "amount" tokens available
+	  - Question again the parameter "balances" on the owner address to check that the owner has now less tokens available
+
+
+17. Add an event to the transfer function to indicate that a transfer has taken place.
+    It should log the amount and the recipient address.
+
+    Test: - Call the function "getSupply" to check that totalSupply = 10000
+	  - Question the parameter "balances" to check the totalSupply owned by the owner (copy its address)
+	  - Change address (choose among available in the list) and question the parameter "balances"
+	    to check the totalSupply owned by the user (copy its address)
+	  - Call the function "transfer" to send "amount" tokens from the sender address (the one selected in the above list)
+	    to the receiver address
+	  - Check, from the Terminal, that the transaction triggered calling the function transfer has logged the event,
+	    storing data about the address to and the amount sent
+
+
+18. We want to keep a record for each user's transfers.
+    Create a struct called Payment that stores the transfer amount and the recipient's address.
+
+
+19. We want to have a payments array for each user sending the payment.
+    Create a mapping which returns an array of Payment structs when given this user's address.
+
+    Test: - Call the function "getSupply" to check that totalSupply = 10000
+	  - Question the parameter "balances" to check the totalSupply owned by the owner (copy its address)
+	  - Change address (choose among available in the list) and question the parameter "balances"
+	    to check the totalSupply owned by the user (copy its address)
+	  - Call the function "transfer" to send "amount" tokens from the sender address (the one selected in the above list)
+	    to the receiver address
+	  - Call the function "getTransfers" to check the record of transaction executed by the selected address
+
