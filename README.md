@@ -75,7 +75,7 @@ This corresponds to the Beacon Deposit Contract. Balance: 14,373,623.00771856 Et
 ***- Address 0x000000000000000000000000000000000000dEaD if called by the deployer***  
 ***- The deployer's address otherwise***  
 
-Done. Available in the folder "Homework_3".  
+Available in the folder "Homework_3".  
 
 # Homework 4
 
@@ -126,7 +126,7 @@ b) Using your choice of data structure, set up a variable called balances to kee
 
 ***19. We want to have a payments array for each user sending the payment. Create a mapping which returns an array of Payment structs when given this user's address.***
 
-Done. Available in the folder "Homework_4". Added a .txt file "Test_flow.txt" to check the flow of execution and retrieved data.
+Available in the folder "Homework_4". Added a .txt file "Test_flow.txt" to check the flow of execution and retrieved data.
 
 # Homework 5
 
@@ -137,4 +137,27 @@ Done. Available in the folder "Homework_4". Added a .txt file "Test_flow.txt" to
    
 ***2. Update your Volcano coin contract to inherit from the Open Zeppelin "Ownable" contract, and use this to replace the owner functionality in your contract.***
 
-Done. Available in the folder "Homework_5".
+Available in the folder "Homework_5".
+
+# Homework 6
+
+***Team Game***
+
+# Homework 7
+
+**Adding more functionality to the Volcano Coin contract**
+
+***1. We made a payment mapping, but we haven’t added all the functionality for it yet. Write a function to view the payment records, specifying the user as an input.*** 
+***What is the difference between doing this and making the mapping public?***
+
+***2. For the payments record mapping, create a function called recordPayment that takes as inputs: 
+***- the sender’s address;*** 
+***- the receiver’s address and;*** 
+***- the amount.*** 
+***Then creates a new payment record and adds the new record to the user’s payment record.***
+
+***3. Each time we make a transfer of tokens, we should call the this recordPayment function to record the transfer.***
+
+Available in the folder "Homework_7".
+
+# Homework 8
