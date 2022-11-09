@@ -72,8 +72,8 @@ This corresponds to the Beacon Deposit Contract. Balance: 14,373,623.00771856 Et
 ***2. Update that variable with the deployer's address when the contract is deployed.***
 
 ***3. Write an external function to return:***  
-***- Address 0x000000000000000000000000000000000000dEaD if called by the deployer***  
-***- The deployer's address otherwise***  
+  ***- Address 0x000000000000000000000000000000000000dEaD if called by the deployer***  
+  ***- The deployer's address otherwise***  
 
 Available in the folder "Homework_3".  
 
@@ -115,10 +115,10 @@ b) Using your choice of data structure, set up a variable called balances to kee
 ***15. Now change the constructor, to give all of the total supply to the owner of the contract.***
 
 ***16. Now add a public function called transfer to allow a user to transfer their tokens to another address. This function should have 2 parameters:***  
-       ***- the amount to transfer;***  
-       ***- the recipient address.*** 
-       ***Why do we not need the sender's address here?***  
-       ***What would be the implication of having the sender's address as a parameter?***
+   ***- the amount to transfer;***  
+   ***- the recipient address.*** 
+   ***Why do we not need the sender's address here?***  
+   ***What would be the implication of having the sender's address as a parameter?***
        
 ***17. Add an event to the transfer function to indicate that a transfer has taken place, it should log the amount and the recipient address.***
 
@@ -131,9 +131,9 @@ Available in the folder "Homework_4". Added a .txt file "Test_flow.txt" to check
 # Homework 5
 
 ***1. Install a browser wallet such as Metamask***  
-   *- Connect to the Goerli Test network*  
-   *- Set up a wallet that will be used by your team for the team games*  
-   *- If you need some test ETH, lets us know and we can send some to your team.*
+    *- Connect to the Goerli Test network*  
+    *- Set up a wallet that will be used by your team for the team games*  
+    *- If you need some test ETH, lets us know and we can send some to your team.*
    
 ***2. Update your Volcano coin contract to inherit from the Open Zeppelin "Ownable" contract, and use this to replace the owner functionality in your contract.***
 
@@ -155,9 +155,9 @@ Available in the folder "Homework_5".
 **Writing a function to view payment records**: Create automatically a tuple of arrays for each transaction executed by a specific address, pushing into consequent transactions done by the same address. There is no more need to keep in mind how many transactions have been executed by a specific address.
 
 ***2. For the payments record mapping, create a function called recordPayment that takes as inputs:***  
-***- the sender’s address;***  
-***- the receiver’s address and;***  
-***- the amount.***  
+  ***- the sender’s address;***  
+  ***- the receiver’s address and;***  
+  ***- the amount.***  
 ***Then creates a new payment record and adds the new record to the user’s payment record.***
 
 ***3. Each time we make a transfer of tokens, we should call the this recordPayment function to record the transfer.***
@@ -188,8 +188,8 @@ We now want to create an NFT. We will use the Open Zeppelin libraries to help wi
 ***2. Create a VolcanoNFT contract. This should inherit from any ERC721 implementation from the Open Zeppelin standard libraries ([Link](https://docs.openzeppelin.com/contracts/2.x/erc721))***  
 ***3. Give your NFT a name and a symbol.***  
 ***4. Write unit tests to check that you can:***  
-***- Mint new NFTs***  
-***- Transfer an NFT***  
+  ***- Mint new NFTs***  
+  ***- Transfer an NFT***  
 ***5. Deploy your contract to Goerli and send some NFTs to your colleagues.***
 
 Available in the folder "Homework_9".  
