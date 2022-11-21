@@ -1,0 +1,745 @@
+{
+	"compiler": {
+		"version": "0.8.17+commit.8df45f5f"
+	},
+	"language": "Solidity",
+	"output": {
+		"abi": [
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "log",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "",
+						"type": "address"
+					}
+				],
+				"name": "log_address",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "val",
+						"type": "uint256[]"
+					}
+				],
+				"name": "log_array",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "int256[]",
+						"name": "val",
+						"type": "int256[]"
+					}
+				],
+				"name": "log_array",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "val",
+						"type": "address[]"
+					}
+				],
+				"name": "log_array",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "log_bytes",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "",
+						"type": "bytes32"
+					}
+				],
+				"name": "log_bytes32",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "",
+						"type": "int256"
+					}
+				],
+				"name": "log_int",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address",
+						"name": "val",
+						"type": "address"
+					}
+				],
+				"name": "log_named_address",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256[]",
+						"name": "val",
+						"type": "uint256[]"
+					}
+				],
+				"name": "log_named_array",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "int256[]",
+						"name": "val",
+						"type": "int256[]"
+					}
+				],
+				"name": "log_named_array",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "address[]",
+						"name": "val",
+						"type": "address[]"
+					}
+				],
+				"name": "log_named_array",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "val",
+						"type": "bytes"
+					}
+				],
+				"name": "log_named_bytes",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "bytes32",
+						"name": "val",
+						"type": "bytes32"
+					}
+				],
+				"name": "log_named_bytes32",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "val",
+						"type": "int256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "decimals",
+						"type": "uint256"
+					}
+				],
+				"name": "log_named_decimal_int",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "decimals",
+						"type": "uint256"
+					}
+				],
+				"name": "log_named_decimal_uint",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "int256",
+						"name": "val",
+						"type": "int256"
+					}
+				],
+				"name": "log_named_int",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "val",
+						"type": "string"
+					}
+				],
+				"name": "log_named_string",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "key",
+						"type": "string"
+					},
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "val",
+						"type": "uint256"
+					}
+				],
+				"name": "log_named_uint",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "string",
+						"name": "",
+						"type": "string"
+					}
+				],
+				"name": "log_string",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "uint256",
+						"name": "",
+						"type": "uint256"
+					}
+				],
+				"name": "log_uint",
+				"type": "event"
+			},
+			{
+				"anonymous": false,
+				"inputs": [
+					{
+						"indexed": false,
+						"internalType": "bytes",
+						"name": "",
+						"type": "bytes"
+					}
+				],
+				"name": "logs",
+				"type": "event"
+			},
+			{
+				"inputs": [],
+				"name": "IS_TEST",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "view",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "failed",
+				"outputs": [
+					{
+						"internalType": "bool",
+						"name": "",
+						"type": "bool"
+					}
+				],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "setUp",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testBalanceIncremented",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testCorrectTokenId",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testFailMaxSupplyReached",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testFailMintPriceOver",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testFailMintToZeroAddress",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testFailNoMintPricePaid",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testMintPricePaid",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testNewMintOwnerRegistered",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testWithdrawalFailsAsNotOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			},
+			{
+				"inputs": [],
+				"name": "testWithdrawalWorksAsOwner",
+				"outputs": [],
+				"stateMutability": "nonpayable",
+				"type": "function"
+			}
+		],
+		"devdoc": {
+			"kind": "dev",
+			"methods": {},
+			"version": 1
+		},
+		"userdoc": {
+			"kind": "user",
+			"methods": {},
+			"version": 1
+		}
+	},
+	"settings": {
+		"compilationTarget": {
+			"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/test/VolcanoNftOpenZeppelin.t.sol": "NFTTest"
+		},
+		"evmVersion": "london",
+		"libraries": {},
+		"metadata": {
+			"bytecodeHash": "ipfs"
+		},
+		"optimizer": {
+			"enabled": false,
+			"runs": 200
+		},
+		"remappings": []
+	},
+	"sources": {
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/lib/ds-test/src/test.sol": {
+			"keccak256": "0xb39cd1d5220cb474947b131e15a4538334b7e886af244b440ae5c9c6bba96a54",
+			"license": "GPL-3.0-or-later",
+			"urls": [
+				"bzz-raw://3101520221449ac0070bda3881311a71d9aa87e5210765e875246922cb5cb5f5",
+				"dweb:/ipfs/Qmbg6kAHNoG7ox9N9Xqd9Ere2H2XixMFWFqvyPwFCzB3Gr"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/Common.sol": {
+			"keccak256": "0x3ed7f49e907eaf339c3bb0b79a81d303d0f9e37aa5b8a9854c0cbfc3ad9a3ef0",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://01c2532fb5fea32c6dc165518f2c4918af25d9139d17c11da330414c9797a70b",
+				"dweb:/ipfs/QmV4r8a1e9Rgu2xoigVCuSv3fZ737wD2DXbV6ZmHXVUtDn"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/Components.sol": {
+			"keccak256": "0xd3b8ba6df58174d5d650a668dfa49eeee28b2b855514b9e793e1c0b69d747149",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://cce2b2ca79d5ce993b91358ed3d588396295e0aba9bb923481c1ffa5058a0dcd",
+				"dweb:/ipfs/QmPNymteQmLWk7SqQhNsF6Rbc3xFPY7xGb4fBKravHLXD3"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/StdAssertions.sol": {
+			"keccak256": "0xd2ac402483b70ead6e053993c03253a9d7d6b437a981b7a0158c4748abf202f5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://f662716875766eb46d34de4949bfb79ca6c408054f004fff0b2fc23d967182f8",
+				"dweb:/ipfs/QmeNGCZBnSDjK7djHuGJ34kV2rNh8SL69SJTjR1PEsgJi1"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/StdCheats.sol": {
+			"keccak256": "0xf0c5c17c4cdfd0de659cf5e58e0e1611b6ee53900d3ab8b07b871d71d0b37bc6",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://21ffda3891e7480d5fdbf7f5e9d539f0ed76204bca69738f8ee006395ef1e23e",
+				"dweb:/ipfs/Qmbhbn8zVXrCyvhvoQ5AUSj3usVGqMbMSEHYkNPdbQKBxt"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/StdError.sol": {
+			"keccak256": "0xbf477b11a42d7611696956546bcfaa29317d1166bf65e402344599c05943fc77",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://bc2e117d1135e030862b96a6526a43feb38d396cc79857f1fb696d4eff0e5fd6",
+				"dweb:/ipfs/QmdSuQ5RrQudTLsNmWXGEeVJX8gR5U9XPm6m4dwwuQnJrj"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/StdJson.sol": {
+			"keccak256": "0x2291ee8f379552b86f34d98acb248d50442c7d4ab94aed03f1c8ddb6aea6852d",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ca6ca6fe35692428b507008b24e4ec4ba0cabaf58110fd0b4456a42e0166bdc",
+				"dweb:/ipfs/QmUcSeXfYMyusrWxEdPRMeWFYhf9qD6YJaZXCVo29F4eus"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/StdMath.sol": {
+			"keccak256": "0xd90ad4fd8aeaeb8929964e686e769fdedd5eded3fc3815df194a0ab9f91a3fb2",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://7919b70f636c7b805223992f28ad1ad0145d6c1385b5931a3589aface5fe6c92",
+				"dweb:/ipfs/QmY7FRaULwoGgFteF8GawjQJRfasNgpWnU2aiMsFrYpuTC"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/StdStorage.sol": {
+			"keccak256": "0xb0da85ce6999940eba6190a26c15b9bc7aede57123891287e1b30f80333a9cf5",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d287fd41de40ef992588f7a9531e66d1e9f8e4f3f194b9e721ac576d4613964a",
+				"dweb:/ipfs/QmbFYYjoc8WGLKVfDe4rscYPwdGq48incbwRQNoLtcMMjn"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/StdUtils.sol": {
+			"keccak256": "0x216818221765c43713791708d7dc83fcd5ada81766c9d4ce54551528c191a59f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://3f03d0ef065ce600e5922f3e9c92f0f54ff7c12895a250fa97d83e9ee38e7e2b",
+				"dweb:/ipfs/QmX59m9mNRNEhjhEZnxbDirniesi26pnDaNzF5hPB4A3E8"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/Test.sol": {
+			"keccak256": "0x1d048e702d241727d75685d7516b51b72ff23513f6e2193e569f0fbc2a9112ad",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://089652ff5d0bb1093f684863b3def0a505edb9c6fd533f8bceb1f12ce833c90e",
+				"dweb:/ipfs/QmccjqbH8guWaVDi3QAEirMMs45XF3VV68dwBa5xwnFL1k"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/Vm.sol": {
+			"keccak256": "0xf4442ded918d167635adc30ba3c451d45666c89b38e0eec2adaf0857b49a72f7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://b4cb181bd626fe852a36f9b1cf2d79ef0fa9d2bf2cbf0ec86f33f5bf492c0b69",
+				"dweb:/ipfs/QmaZKevWdZbjoTB7qtzKjP3dZhiUGymJc4Wb9qkNMewxjB"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/console.sol": {
+			"keccak256": "0x91d5413c2434ca58fd278b6e1e79fd98d10c83931cc2596a6038eee4daeb34ba",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://91ccea707361e48b9b7a161fe81f496b9932bc471e9c4e4e1e9c283f2453cc70",
+				"dweb:/ipfs/QmcB66sZhQ6Kz7MUHcLE78YXRUZxoZnnxZjN6yATsbB2ec"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/forge-std/src/console2.sol": {
+			"keccak256": "0x225cc1ec33efd35c90e78aec0792ed9751cd6217e646271172421e96e2e2cc0f",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6c6adbd216e40ca2387835b8618c82e7153cb826023d38943bbb0c2e992644aa",
+				"dweb:/ipfs/QmZeejwEkm7iH9NHih7dPbuNqivuFn27EkgJesgByzS9wD"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/access/Ownable.sol": {
+			"keccak256": "0xa94b34880e3c1b0b931662cb1c09e5dfa6662f31cba80e07c5ee71cd135c9673",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://40fb1b5102468f783961d0af743f91b9980cf66b50d1d12009f6bb1869cea4d2",
+				"dweb:/ipfs/QmYqEbJML4jB1GHbzD4cUZDtJg5wVwNm3vDJq1GbyDus8y"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/security/PullPayment.sol": {
+			"keccak256": "0xbd7698fff21868e2b8d4a5652ceca6c96c1b0111b12c9d7aaef88f71373b3860",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://1ebdbbe7554678abda059f843c0b0c9056a4c60a6e52617f88b64c9c9bd910b0",
+				"dweb:/ipfs/QmaVqZpr6G6aaxWjupYg4vcT6U7HGWRpzKGyzixmsTWoen"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/token/ERC721/ERC721.sol": {
+			"keccak256": "0xd89f3585b211fc9e3408384a4c4efdc3a93b2f877a3821046fa01c219d35be1b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://5ea15ef7c8980240ccd46df13809d163f749bc0a01d8bced1875660d4872da1c",
+				"dweb:/ipfs/QmbDfAT9VeCSG4cnPd6tjDMp8ED85dLHbWyMyv7wbmL4CH"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721.sol": {
+			"keccak256": "0xab28a56179c1db258c9bf5235b382698cb650debecb51b23d12be9e241374b68",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://daae589a9d6fa7e55f99f86c0a16796ca490f243fb3693632c3711c0646c1d56",
+				"dweb:/ipfs/QmR3zpd7wNw3rcUdekwiv6FYHJqksuTCXLVioTxu6Fbxk3"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/token/ERC721/IERC721Receiver.sol": {
+			"keccak256": "0xa82b58eca1ee256be466e536706850163d2ec7821945abd6b4778cfb3bee37da",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6e75cf83beb757b8855791088546b8337e9d4684e169400c20d44a515353b708",
+				"dweb:/ipfs/QmYvPafLfoquiDMEj7CKHtvbgHu7TJNPSVPSCjrtjV8HjV"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/token/ERC721/extensions/IERC721Metadata.sol": {
+			"keccak256": "0x75b829ff2f26c14355d1cba20e16fe7b29ca58eb5fef665ede48bc0f9c6c74b9",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://a0a107160525724f9e1bbbab031defc2f298296dd9e331f16a6f7130cec32146",
+				"dweb:/ipfs/QmemujxSd7gX8A9M8UwmNbz4Ms3U9FG9QfudUgxwvTmPWf"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/utils/Address.sol": {
+			"keccak256": "0x68404b57d114b893554b0e54334b32f578f5d1abf61830025c83fb71dc1944ce",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d3d0a94b3c8afd92c2a9f03f3325e9ac22cec56e995b94ff212670ff3653f0d3",
+				"dweb:/ipfs/QmPqKWUysbo8QqKcqH5Lp7SQiL1LfjeoGCSa7iFWmAP8Mw"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/utils/Context.sol": {
+			"keccak256": "0xe2e337e6dde9ef6b680e07338c493ebea1b5fd09b43424112868e9cc1706bca7",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://6df0ddf21ce9f58271bdfaa85cde98b200ef242a05a3f85c2bc10a8294800a92",
+				"dweb:/ipfs/QmRK2Y5Yc6BK7tGKkgsgn3aJEQGi5aakeSPZvS65PV8Xp3"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/utils/Counters.sol": {
+			"keccak256": "0xf0018c2440fbe238dd3a8732fa8e17a0f9dce84d31451dc8a32f6d62b349c9f1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://59e1c62884d55b70f3ae5432b44bb3166ad71ae3acd19c57ab6ddc3c87c325ee",
+				"dweb:/ipfs/QmezuXg5GK5oeA4F91EZhozBFekhq5TD966bHPH18cCqhu"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/utils/Strings.sol": {
+			"keccak256": "0xa4d1d62251f8574deb032a35fc948386a9b4de74b812d4f545a1ac120486b48a",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://8c969013129ba9e651a20735ef659fef6d8a1139ea3607bd4b26ddea2d645634",
+				"dweb:/ipfs/QmVhVa6LGuzAcB8qgDtVHRkucn4ihj5UZr8xBLcJkP6ucb"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/utils/escrow/Escrow.sol": {
+			"keccak256": "0xabdff382f93edb8bd94b227798fc0daf64abe891403e1e525f5870c2cae8bf65",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://402701e1bf7c6314463211809668b51986f27695b5d552dcd51aed0730c66680",
+				"dweb:/ipfs/QmRLv8Tr9ZV7QABCSr2ri4N1EsKGebFC87ti9794GMGLiL"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/utils/introspection/ERC165.sol": {
+			"keccak256": "0xd10975de010d89fd1c78dc5e8a9a7e7f496198085c151648f20cba166b32582b",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://fb0048dee081f6fffa5f74afc3fb328483c2a30504e94a0ddd2a5114d731ec4d",
+				"dweb:/ipfs/QmZptt1nmYoA5SgjwnSgWqgUSDgm4q52Yos3xhnMv3MV43"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/utils/introspection/IERC165.sol": {
+			"keccak256": "0x447a5f3ddc18419d41ff92b3773fb86471b1db25773e07f877f548918a185bf1",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://be161e54f24e5c6fae81a12db1a8ae87bc5ae1b0ddc805d82a1440a68455088f",
+				"dweb:/ipfs/QmP7C3CHdY9urF4dEMb9wmsp1wMxHF6nhA2yQE5SKiPAdy"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/lib/openzeppelin-contracts/contracts/utils/math/Math.sol": {
+			"keccak256": "0x50d8442df21e003cffe241feead16ae1f817afb016e9caab96235d7017816fd8",
+			"license": "MIT",
+			"urls": [
+				"bzz-raw://d079afcda8d243ca111f3471d5bb351b90d64806eb5e9704c414a2808ff02d44",
+				"dweb:/ipfs/QmeUcosk8rKGvV9yghc58fd2Te66D943JFBS5jD4mbUZaC"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/src/VolcanoNftOpenZeppelin.sol": {
+			"keccak256": "0x1bc1e11452311ab6d60c0916fd1433c15501cdfe12d7fb845c027bce21cfea67",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://17e0d1b92c6f05f15c72c7cd33d56157069996a6573c0f9993ac318bb0e167fe",
+				"dweb:/ipfs/QmSThG9DDsipYYeiBJred1sEfv46oRcaZQqBPKnSNGawh1"
+			]
+		},
+		"BLOCKCHAIN_GitHub/SOLIDITY/Projects/ETH_DENVER_BOOTCAMP/Homework_11/OpenZeppelin/test/VolcanoNftOpenZeppelin.t.sol": {
+			"keccak256": "0x47d1d085a12dcd1048277356e1809ae71bf8ba1c4c36f0cafa8af721311fa8f3",
+			"license": "UNLICENSED",
+			"urls": [
+				"bzz-raw://3ccf1d412cc6bd3cffa8317fe58233584b18b1d9b01771525cc3a1e129db6aa7",
+				"dweb:/ipfs/QmNv6E3SJpyB8MT447SWRp6AqtPWMhpLJVJoJcHz4XnS5c"
+			]
+		}
+	},
+	"version": 1
+}
