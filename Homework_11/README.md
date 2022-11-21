@@ -6,6 +6,6 @@ Continue developing your Volcano NFT project
 TO DO: payment using Volcano Coin
 
 ***2. Make sure that when a token is minted we can specify a token URI - a location where we can store metadata / images for the NFT.***  
-Done using [Render](https://render.com/) to host a Node js app for storing image and [ngrok](https://www.npmjs.com/package/ngrok)to share local host api where metadata for tokenID n.1 are stored.
+Done using [Render](https://render.com/) to host a Node js app for storing image and [ngrok](https://www.npmjs.com/package/ngrok) to share local host api where metadata for tokenID n.1 are stored.
 
 ***3. What would be the problem with providing a function to allow us to change the token URI?***  
