@@ -26,6 +26,7 @@ describe("Mint NFT Contract", function () {
             const finalBalance = await helperStaff.balanceOf(owner.address)
             expect(finalBalance.toString()).to.equal("1");
         });
+        
         it('should be able to pause and unpause contract', async () => {
             // Pause the contract
             await helperStaff.pause();
@@ -51,21 +52,23 @@ describe("Mint NFT Contract", function () {
             let expectedNumberNft = 1;
             expect(Number(balance)).to.equal(expectedNumberNft);
           });
-        // Define a test to verify that the mintNFT() method works as expected
-it("should mint a new NFT", async () => {
-  // Mint a new NFT
-  await helperStaff.mintNFT(addrs2.address);
-  const tokenId = await helperStaff.tokenId();
-  console.log(tokenId)
-  // Verify that the token ID is not null
-  expect(Number(tokenId)).to.not.be.null;
+        
+     // Define a test to verify that the mintNFT() method works as expected
+    it("should mint a new NFT", async () => {
+            
+          // Mint a new NFT
+          await helperStaff.mintNFT(addrs2.address);
+          const tokenId = await helperStaff.tokenId();
+          console.log(tokenId)
+          // Verify that the token ID is not null
+          expect(Number(tokenId)).to.not.be.null;
   
-  // Verify that the token URI is correct
-  const tokenURI = await helperStaff.tokenURI(tokenId);
-  console.log(tokenURI)
-  expect(tokenURI).to.equal(
-    `https://ipfs.io/ipfs/QmbQziNu8fL8fVcmNvXmTPHHQMwSg9gSz1aQBn8QZvSTGj/${tokenId}.json`
-  );
+          // Verify that the token URI is correct
+          const tokenURI = await helperStaff.tokenURI(tokenId);
+          console.log(tokenURI)
+          expect(tokenURI).to.equal(
+            `https://ipfs.io/ipfs/QmbQziNu8fL8fVcmNvXmTPHHQMwSg9gSz1aQBn8QZvSTGj/${tokenId}.json`
+          );
   
   });
     })
