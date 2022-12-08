@@ -1,4 +1,5 @@
-const {expect} = require("chai");
+require("@nomicfoundation/hardhat-chai-matchers")
+const {expect, assert} = require("chai");
 const {ethers} = require("hardhat");
 const { loadFixture } = require("@nomicfoundation/hardhat-network-helpers");
 describe("Mint NFT Contract", function () {
@@ -13,9 +14,32 @@ describe("Mint NFT Contract", function () {
     })
 
     describe("Deployment", function () {
+      //Test that the contract is properly deployed and has the correct name and symbol
         it("Should have the correct owner", async function () {
             expect(await helperStaff.owner()).to.equal(owner.address);
         });
+
+        it('should have the correct name', async () => {
+          const name = await helperStaff.name();
+          assert.equal(name, "PersonInNeed", "The contract should have the correct name");
+        });
+
+        it('should have the correct symbol', async () => {
+          const symbol = await helperStaff.symbol();
+          assert.equal(symbol, "PIN", "The contract should have the correct symbol");
+        });
+
+      //Test that the mintNFT function correctly mints a NFT for a given beneficiary address
+      it('should mint a NFT for the given beneficiary address', async () => {
+        const tokenId = await helperStaff.mintNFT(addrs2.address);
+        assert.notEqual(Number(tokenId), 0, "The function should mint a NFT with a non-zero token ID");
+      });
+    
+      it('should not allow minting a NFT for the same beneficiary address twice', async () => {
+            expect(await helperStaff.mintNFT(addrs2.address)).to.be.reverted
+            
+      });
+
 
         it("Should have the correct balance after minting", async function () {
             const initialBalance = await helperStaff.balanceOf(owner.address)
@@ -26,49 +50,22 @@ describe("Mint NFT Contract", function () {
             const finalBalance = await helperStaff.balanceOf(owner.address)
             expect(finalBalance.toString()).to.equal("1");
         });
-        
-        it('should be able to pause and unpause contract', async () => {
-            // Pause the contract
-            await helperStaff.pause();
-        
-            // Try to mint an NFT while the contract is paused
-            // This should fail
-            let errorThrown = false;
-            try {
-              await helperStaff.mintNFT(addrs1.address);
-            } catch (error) {
-              errorThrown = true;
-            }
-            expect(errorThrown).to.be.true;
-        
-            // Unpause the contract
-            await helperStaff.unpause();
-        
-            // Mint an NFT again, this should succeed
-            await helperStaff.mintNFT(addrs1.address);
-        
-            // Check that the recipient's balance was updated
-            const balance = await helperStaff.balanceOf(addrs1.address);
-            let expectedNumberNft = 1;
-            expect(Number(balance)).to.equal(expectedNumberNft);
-          });
-        
-     // Define a test to verify that the mintNFT() method works as expected
-    it("should mint a new NFT", async () => {
-            
-          // Mint a new NFT
-          await helperStaff.mintNFT(addrs2.address);
-          const tokenId = await helperStaff.tokenId();
-          console.log(tokenId)
-          // Verify that the token ID is not null
-          expect(Number(tokenId)).to.not.be.null;
+      
+        // Define a test to verify that the mintNFT() method works as expected
+it("should mint a new NFT", async () => {
+  // Mint a new NFT
+  await helperStaff.mintNFT(addrs2.address);
+  const tokenId = await helperStaff.tokenId();
+  console.log(tokenId)
+  // Verify that the token ID is not null
+  expect(Number(tokenId)).to.not.be.null;
   
-          // Verify that the token URI is correct
-          const tokenURI = await helperStaff.tokenURI(tokenId);
-          console.log(tokenURI)
-          expect(tokenURI).to.equal(
-            `https://ipfs.io/ipfs/QmbQziNu8fL8fVcmNvXmTPHHQMwSg9gSz1aQBn8QZvSTGj/${tokenId}.json`
-          );
+  // Verify that the token URI is correct
+  const tokenURI = await helperStaff.tokenURI(tokenId);
+  console.log(tokenURI)
+  expect(tokenURI).to.equal(
+    `https://ipfs.io/ipfs/QmY5RhCzoQ8v6eUsXr7EiJDDayWUbs4cd9t3rM7prATNVL/${tokenId}.json`
+  );
   
   });
     })
