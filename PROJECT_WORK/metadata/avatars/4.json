@@ -1,0 +1,10 @@
+{
+    "description": "Person In Need Avatar",
+    "image": "https://ipfs.io/ipfs/QmaYQLsLwJkYJh9BK2ABCNDHsNjrqyXM9jj5QZJsetchKt/4.png",
+    "name": "Jim",
+    "birthday": "16-02-1965",
+    "location": "Naples, Italy",
+    "occupancy": "Unemployed",
+    "family_members": "1",
+    "wallet_address": "0x583031D1113aD414F02576BD6afaBfb302140225"
+}

@@ -1,0 +1,10 @@
+{
+    "description": "Person In Need Avatar",
+    "image": "https://ipfs.io/ipfs/QmaYQLsLwJkYJh9BK2ABCNDHsNjrqyXM9jj5QZJsetchKt/2.png",
+    "name": "Charlie",
+    "birthday": "21-06-1985",
+    "location": "Zagreb, Croatia",
+    "occupancy": "Unemployed",
+    "family_members": "4",
+    "wallet_address": "0x14723A09ACff6D2A60DcdF7aA4AFf308FDDC160C"
+}
